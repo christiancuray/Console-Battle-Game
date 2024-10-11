@@ -1,0 +1,8 @@
+# ninja log v5
+1	523	1728613806372381006	CMakeFiles/ws02.dir/barbarian.cpp.o	3c7461bff0c430d0
+2	526	1728613806372379714	CMakeFiles/ws02.dir/characterTpl.cpp.o	38c61e80aa24cc4b
+2	527	1728613806372379256	CMakeFiles/ws02.dir/rogue.cpp.o	1ab12468890f6567
+525	787	1728613806639725582	CMakeFiles/ws02.dir/guild.cpp.o	75ca16aa3135b4c7
+2	526	1728613806372464965	CMakeFiles/ws02.dir/archer.cpp.o	50bff73f4bc65b87
+1	553	1728613806404647542	CMakeFiles/ws02.dir/tester_1.cpp.o	110a67125af0ebad
+3	553	1728613806404611667	CMakeFiles/ws02.dir/team.cpp.o	5714e908a17f709a
