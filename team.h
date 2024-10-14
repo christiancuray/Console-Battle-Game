@@ -11,18 +11,23 @@ namespace seneca{
         size_t m_size{};
         size_t m_capacity{};
 
+        // private member functions to help with resizing the array
         void resize();
     public:
-        Team() : m_TeamName{}, m_characters(nullptr), m_size(0), m_capacity(0) {};
-        Team(const char* name) : m_TeamName(name), m_characters(nullptr), m_size(0), m_capacity(0) {};
-
+        // Constructors
+        Team();
+        Team(const char* name);
+        // Copy constructor and assignment operator
         Team(const Team& other);
         Team& operator=(const Team& other);
 
+        // Move constructor and assignment operator
         Team(Team&& other) noexcept;
         Team& operator=(Team&& other) noexcept;
+        // Destructor
         ~Team();
 
+        // Member functions
         void addMember(const Character* c);
         void removeMember(const std::string& c);
         Character* operator[](size_t index) const;

@@ -55,30 +55,6 @@ build CMakeFiles/ws02.dir/tester_1.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Us
   OBJECT_DIR = CMakeFiles/ws02.dir
   OBJECT_FILE_DIR = CMakeFiles/ws02.dir
 
-build CMakeFiles/ws02.dir/barbarian.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users/christian/Documents/3rd$ sem/OOP345/ws02/barbarian.cpp || cmake_object_order_depends_target_ws02
-  DEP_FILE = CMakeFiles/ws02.dir/barbarian.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/ws02.dir
-  OBJECT_FILE_DIR = CMakeFiles/ws02.dir
-
-build CMakeFiles/ws02.dir/characterTpl.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users/christian/Documents/3rd$ sem/OOP345/ws02/characterTpl.cpp || cmake_object_order_depends_target_ws02
-  DEP_FILE = CMakeFiles/ws02.dir/characterTpl.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/ws02.dir
-  OBJECT_FILE_DIR = CMakeFiles/ws02.dir
-
-build CMakeFiles/ws02.dir/archer.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users/christian/Documents/3rd$ sem/OOP345/ws02/archer.cpp || cmake_object_order_depends_target_ws02
-  DEP_FILE = CMakeFiles/ws02.dir/archer.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/ws02.dir
-  OBJECT_FILE_DIR = CMakeFiles/ws02.dir
-
-build CMakeFiles/ws02.dir/rogue.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users/christian/Documents/3rd$ sem/OOP345/ws02/rogue.cpp || cmake_object_order_depends_target_ws02
-  DEP_FILE = CMakeFiles/ws02.dir/rogue.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/ws02.dir
-  OBJECT_FILE_DIR = CMakeFiles/ws02.dir
-
 build CMakeFiles/ws02.dir/team.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users/christian/Documents/3rd$ sem/OOP345/ws02/team.cpp || cmake_object_order_depends_target_ws02
   DEP_FILE = CMakeFiles/ws02.dir/team.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
@@ -99,7 +75,7 @@ build CMakeFiles/ws02.dir/guild.cpp.o: CXX_COMPILER__ws02_unscanned_Debug /Users
 #############################################
 # Link the executable ws02
 
-build ws02: CXX_EXECUTABLE_LINKER__ws02_Debug CMakeFiles/ws02.dir/tester_1.cpp.o CMakeFiles/ws02.dir/barbarian.cpp.o CMakeFiles/ws02.dir/characterTpl.cpp.o CMakeFiles/ws02.dir/archer.cpp.o CMakeFiles/ws02.dir/rogue.cpp.o CMakeFiles/ws02.dir/team.cpp.o CMakeFiles/ws02.dir/guild.cpp.o
+build ws02: CXX_EXECUTABLE_LINKER__ws02_Debug CMakeFiles/ws02.dir/tester_1.cpp.o CMakeFiles/ws02.dir/team.cpp.o CMakeFiles/ws02.dir/guild.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/ws02.dir
   POST_BUILD = :
