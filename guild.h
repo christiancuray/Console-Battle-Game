@@ -14,7 +14,7 @@ namespace seneca{
 
     void resize();
     public:
-    Guild();
+    Guild() = default;
     Guild(const char* name);
 
     ~Guild();
@@ -28,8 +28,9 @@ namespace seneca{
     Character* operator[](size_t index) const;
     void showMembers() const;
 
-
     };
+
+
 }
 
 #endif //SENECA_GUILD_H

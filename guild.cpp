@@ -13,9 +13,6 @@ namespace seneca{
         m_characters = new_characters;
     }
 
-    Guild::Guild() : m_guildName("No guild"), m_characters(nullptr), m_size(0), m_capacity(2) {
-        m_characters = new Character*[m_capacity];
-    }
 
     // Constructor with guild name
     Guild::Guild(const char* name) : m_guildName(name), m_characters(nullptr), m_size(0), m_capacity(2) {
@@ -23,16 +20,7 @@ namespace seneca{
     }
 
     Guild::Guild(const Guild& other) {
-        if(other.m_characters != nullptr) {
-
-            m_guildName = other.m_guildName;
-            m_size = other.m_size;
-            m_capacity = other.m_capacity;
-            m_characters = new Character *[m_capacity];
-            for (size_t i = 0; i < m_size; ++i) {
-                m_characters[i] = other.m_characters[i];
-            }
-        }
+        *this = other;
     }
 
     Guild& Guild::operator=(const Guild& other) {
@@ -54,16 +42,7 @@ namespace seneca{
     }
 
     Guild::Guild(Guild &&other) noexcept {
-        if(other.m_characters != nullptr) {
-            m_guildName = std::move(other.m_guildName);
-            m_size = std::move(other.m_size);
-            m_capacity = std::move(other.m_capacity);
-            m_characters = std::move(other.m_characters);
-            other.m_guildName = "";
-            other.m_size = 0;
-            other.m_capacity = 0;
-            other.m_characters = nullptr;
-        }
+       *this = std::move(other);
     }
 
     Guild &Guild::operator=(seneca::Guild &&other) noexcept {
@@ -90,19 +69,25 @@ namespace seneca{
         if (m_size == m_capacity) {
             resize();
         }
-        c->setHealthMax(c->getHealthMax() + 300);
+
+        c->setHealthMax(c->getHealth() +  300);
+        c->setHealth( c->getHealthMax());
         m_characters[m_size++] = c->clone();
     }
 
     void Guild::removeMember(const std::string& c) {
         for (size_t i = 0; i < m_size; ++i) {
-            if (m_characters[i]->getName() == c) {
+            if (m_characters[i] && m_characters[i]->getName() == c) {
                 m_characters[i]->setHealthMax(m_characters[i]->getHealthMax() - 300);
-                for (size_t j = i; j < m_size - 1; ++j) {
-                    m_characters[j] = m_characters[j + 1];
-                }
-                --m_size;
+                m_characters[i]->setHealth( m_characters[i]->getHealth() - 300);
+
+                // creating temp pointer to swap the last element with the element to be deleted
+                Character** temp = m_characters[i];
+                m_characters[i] = m_characters[m_size - 1];
+                m_characters[m_size - 1] = temp;
+                delete m_characters[--m_size];
                 return;
+
             }
         }
     }
